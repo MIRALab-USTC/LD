@@ -1,0 +1,5 @@
+defaults:
+  - model: gcn
+  - dataset: proteins
+  - LM: esm
+root: '/home/zhshi/datasets'

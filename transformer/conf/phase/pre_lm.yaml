@@ -1,0 +1,63 @@
+name: pre_lm
+params:
+  arxiv:
+    deberta-base:
+      epochs: 4
+      eval_steps: 1000
+      warmup_ratio: 0.15
+
+      finetune_prefix: 'pre_gnn'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      save_model: true
+
+      lr: 2e-05
+      lr_scale: 1.0
+      weight_decay: 0.01
+      decay_scale: 1.0
+  products:
+    deberta-base:
+      epochs: 1
+      eval_steps: 1000
+      warmup_ratio: 0.15
+
+      finetune_prefix: 'pre_gnn'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      save_model: true
+
+      lr: 2e-05
+      lr_scale: 1.0
+      weight_decay: 0.01
+      decay_scale: 1.0
+
+    bert-base-uncased:
+      epochs: 1
+      eval_steps: 1000
+      warmup_ratio: 0.2
+
+      finetune_prefix: 'pre_gnn'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      save_model: true
+
+      lr: 2e-05
+      lr_scale: 1.0
+      weight_decay: 0.01
+      decay_scale: 1.0
+
+  proteins:
+    esm2_t33_650M_UR50D:
+      epochs: 4
+      eval_steps: 1000
+      warmup_ratio: 0.15
+
+      finetune_prefix: 'pre_gnn'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      save_model: true
+
+      lr: 1e-05
+      lr_scale: 1.0
+      weight_decay: 0.00
+      decay_scale: 0.0

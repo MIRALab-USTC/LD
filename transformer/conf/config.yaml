@@ -1,0 +1,6 @@
+defaults:
+  - model: gcn
+  - dataset: arxiv
+  - LM: deberta-base
+  - phase: 'admm'
+root: '/root/datasets'

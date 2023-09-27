@@ -1,0 +1,38 @@
+# @package _group_
+name: bert-base-uncased
+path: ~/model/bert-base-uncased/
+params:
+  products:
+    token_folder: /OGB/ogbn_products/token/bert-base-uncased
+    max_length: 512
+    feat_shrink: ''
+    load_best_model_at_end: 'T'
+    dropout: 0.1
+    att_dropout: 0.3
+
+
+    architecture:
+      label_inverse: true
+      use_log: true
+      label_smoothing_factor: 1.0
+      mask_gnn: false
+      ce_reduction: mean
+      cla_dropout: 0.2
+      cla_bias: true
+      pseudo_label_weight: 0.8
+      coef_augmented: 0.0
+      pseudo_temp: 0.2
+      update_hist: true
+      label_as_feat: false
+
+    bf16_full_eval: false
+
+    eq_batch_size: 144
+    max_bsz:
+      6: 4
+      12: 8
+      16: 12
+      24: 9
+      32: 30
+      40: 32
+      70: 96

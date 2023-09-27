@@ -1,0 +1,69 @@
+# @package _group_
+name: deberta-base
+path: ~/model/deberta-base/
+params:
+  arxiv:
+    token_folder: /OGB/ogbn_arxiv/token/microsoft/deberta-base
+    max_length: 512
+    load_best_model_at_end: 'T'
+    dropout: 0.3
+    att_dropout: 0.1
+    feat_shrink: ''
+
+    architecture:
+      label_inverse: true
+      use_log: true
+      label_smoothing_factor: 0.5
+      cla_dropout: 0.4
+      mask_gnn: true
+      pseudo_label_weight: 0.5
+      label_as_feat: false
+      pseudo_temp: 0.2
+      update_hist: true
+      cla_bias: true
+      coef_augmented: 0.0
+      ce_reduction: mean
+    bf16_full_eval: false
+    
+    eq_batch_size: 36
+    max_bsz:
+      6: 4
+      12: 8
+      16: 12
+      24: 9
+      32: 30
+      40: 32
+      70: 96
+  products:
+    token_folder: /OGB/ogbn_products/token/microsoft/deberta-base
+    max_length: 512
+    feat_shrink: ''
+    load_best_model_at_end: 'T'
+    dropout: 0.1
+    att_dropout: 0.3
+    
+    architecture:
+      label_inverse: true
+      use_log: true
+      label_smoothing_factor: 1.0
+      mask_gnn: false 
+      ce_reduction: mean
+      cla_dropout: 0.2
+      cla_bias: true
+      pseudo_label_weight: 0.5
+      coef_augmented: 0.0
+      pseudo_temp: 0.2
+      update_hist: true
+      label_as_feat: false
+    
+    bf16_full_eval: false
+    
+    eq_batch_size: 144
+    max_bsz:
+      6: 4
+      12: 8
+      16: 12
+      24: 9
+      32: 30
+      40: 32
+      70: 96

@@ -1,0 +1,35 @@
+# @package _group_
+name: gamlp
+framework: 'gamlp'
+data_mode: 'dgl'
+norm: true
+norm_type: DA
+loop: true
+loop_value: 1
+partition: 'metis'
+
+params:
+  products:
+    architecture:
+      hidden: 512
+      num_hops: 6
+      ld_layers: 6
+      dropout: 0.5
+      input_drop: 0.2
+      att_dropout: 0.5
+      label_drop: 0.0
+      alpha: 0.5
+      n_layers_1: 4
+      n_layers_2: 4
+      n_layers_3: 4
+      act: leaky_relu
+      residual: true
+      pre_dropout: false
+      bns: true
+      pre_process: true
+      label_num_hops: 9
+      bn_name: LayerNorm
+    loop_importance_bs: 0
+    valid_test_dp: 0.0
+    batch_size: 50000
+    bert_gnn_model: 'GAMLPBertNodeClassifier'

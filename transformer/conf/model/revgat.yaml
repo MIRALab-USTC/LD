@@ -1,0 +1,23 @@
+# @package _group_
+name: revgat
+framework: 'revgat'
+data_mode: 'dgl'
+params:
+  arxiv:
+    architecture:
+      n_hidden: 256
+      n_layers: 3
+      ld_layers: 3
+      n_heads: 3
+      dropout: 0.75
+      input_drop: 0.25
+      attn_drop: 0.0
+      edge_drop: 0.3
+      use_attn_dst: false
+      use_symmetric_norm: false
+      group: 2
+      input_norm: true
+    valid_test_dp: 0.0
+    batch_size: 40
+    admm_batch_size: 1
+    bert_gnn_model: 'REVGATBertNodeClassifier'

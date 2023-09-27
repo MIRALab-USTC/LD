@@ -1,0 +1,131 @@
+name: pre_gnn
+params:
+  arxiv:
+    GCN:
+      epochs: 300
+      eval_steps: 2
+      warmup_ratio: 0.0
+
+      finetune_prefix: 'null'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      gnn_grad_acc: false
+      save_model: true
+
+      lr: 0.01
+      lr_scale: 0.0
+      weight_decay: 0.0
+      decay_scale: 0.0
+
+    MLP:
+      epochs: 200
+      eval_steps: 100
+      warmup_ratio: 0.0
+
+      finetune_prefix: 'null'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      gnn_grad_acc: false
+      save_model: false
+
+      lr: 0.01
+      lr_scale: 0.0
+      weight_decay: 0.0
+      decay_scale: 0.0
+
+    revgat:
+      epochs: 300
+      eval_steps: 2
+      warmup_ratio: 0.0
+
+      finetune_prefix: 'null'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      gnn_grad_acc: false
+      save_model: true
+
+      lr: 0.002
+      lr_scale: 0.0
+      weight_decay: 0.0
+      decay_scale: 0.0
+
+  products:
+    gamlp:
+      epochs: 400
+      eval_steps: 40
+      warmup_ratio: 0.0
+
+      finetune_prefix: 'null'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      gnn_grad_acc: false
+      save_model: true
+
+      lr: 0.001
+      lr_scale: 0.0
+      weight_decay: 0.0
+      decay_scale: 0.0
+    sagn:
+      epochs: 1000
+      eval_steps: 40
+      warmup_ratio: 0.0
+
+      finetune_prefix: 'null'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      gnn_grad_acc: false
+      save_model: true
+
+      lr: 0.001
+      lr_scale: 0.0
+      weight_decay: 0.0
+      decay_scale: 0.0
+
+    MLP:
+      epochs: 200
+      eval_steps: 50
+      warmup_ratio: 0.0
+
+      finetune_prefix: 'null'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      gnn_grad_acc: false
+      save_model: false
+
+      lr: 0.01
+      lr_scale: 0.0
+      weight_decay: 0.0
+      decay_scale: 0.0
+
+  proteins:
+    gat:
+      epochs: 1200
+      eval_steps: 50
+      warmup_ratio: 0.0
+
+      finetune_prefix: 'null'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      gnn_grad_acc: false
+      save_model: true
+
+      lr: 0.002
+      lr_scale: 0.0
+      weight_decay: 0.0
+      decay_scale: 0.0
+
+    MLP:
+      epochs: 200
+      eval_steps: 100
+      warmup_ratio: 0.0
+
+      finetune_prefix: 'null'
+      out_dir: './huggingface_logs'
+      ckpt: '~/model/'
+      gnn_grad_acc: false
+      save_model: false
+
+      lr: 0.01
+      lr_scale: 0.0
+      weight_decay: 0.0
+      decay_scale: 0.0

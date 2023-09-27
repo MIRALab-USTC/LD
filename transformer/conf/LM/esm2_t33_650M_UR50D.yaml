@@ -1,0 +1,33 @@
+# @package _group_
+name: esm2_t33_650M_UR50D
+path: ~/model/esm2_t33_650M_UR50D
+params:
+  proteins:
+    seq_path: /OGB/ogbn_proteins/mapping/nodeidx2proteinid_seq.csv
+    token_folder: /OGB/ogbn_proteins/token/facebook/esm2_t33_650M_UR50D
+    max_length: 512
+    feat_shrink: ''
+    architecture:
+      label_inverse: true
+      use_log: true
+      label_smoothing_factor: 0.2
+      cla_dropout: 0.0
+      ce_reduction: mean
+      cla_bias: true
+      mask_gnn: true
+      pseudo_label_weight: 0.5
+      coef_augmented: 1.0
+      pseudo_temp: 0.2
+      update_hist: true
+      label_as_feat: false
+    load_best_model_at_end: 'T'
+    bf16_full_eval: false
+    eq_batch_size: 36
+    max_bsz:
+      6: 1
+      12: 2
+      16: 4
+      24: 4
+      32: 4
+      40: 16
+      70: 24

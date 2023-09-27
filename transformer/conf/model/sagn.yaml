@@ -1,0 +1,49 @@
+# @package _group_
+name: sagn
+framework: 'sagn'
+data_mode: 'dgl'
+params:
+  products:
+    architecture:
+        n_hidden: 256
+        num_hops: 3
+        num_heads: 1
+        lr: 0.001
+        weight_style: 'attention'
+        alpha: 0.5
+        sfocal: 'first'
+        dropout: 0.5
+        input_drop: 0.2
+        att_drop: 0.4
+        zero_inits: True
+        position_emb: False
+        mlp_layer: 1
+        label_mlp_layer: 4
+        label_drop: 0.5
+        label_residual: False
+        residual: True
+        epochs: 1000
+        weight_decay: 0.0
+        early_stop: 300
+        label_num_hops: 9
+        eval_batch_size: 100000
+        pre_process: True
+        tem: 0.5
+        lam: 0.5
+        decay: 0.9
+        ema: True
+        mean_teacher: True
+        ema_decay: 0.99
+        adap: True
+        sup_lam: 1.0
+        kl: True
+        kl_lam: 0.02
+        top: 0.85
+        down: 0.75
+        warm_up: 100
+        gap: 20
+        warm_step: 1000
+        gap_step: 5
+    valid_test_dp: 0.0
+    batch_size: 50000
+    bert_gnn_model: 'SAGNBertNodeClassifier'

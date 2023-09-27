@@ -1,0 +1,8 @@
+# @package _group_
+name: microsoft/deberta-base
+path: /home/zhshi/model/deberta-base/
+finetune_path: null
+params:
+  proteins:
+    seq_path: /home/zhshi/datasets/OGB/ogbn_proteins/mapping/nodeidx2proteinid_seq.csv
+    token_folder: /home/zhshi/datasets/OGB2/ogbn_proteins/token/

@@ -1,0 +1,20 @@
+# @package _group_
+name: gat
+framework: 'gat'
+data_mode: 'dgl'
+params:
+  proteins:
+    architecture:
+      n_layers: 6
+      ld_layers: 12
+      n_heads: 6
+      n_hidden: 120
+      edge_emb: 16
+      dropout: 0.25
+      input_drop: 0.1
+      attn_drop: 0.0
+      edge_drop: 0.1
+      use_attn_dst: true
+    valid_test_dp: 0.0
+    batch_size: 8662
+    bert_gnn_model: 'GATBertNodeClassifier'
